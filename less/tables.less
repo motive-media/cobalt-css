@@ -1,0 +1,88 @@
+table {
+    &.table {
+        width: 100%;
+        max-width: 100%;
+        background: transparent;
+
+        td,
+        th {
+            padding: 8px;
+            text-align: left;
+
+            &.center {
+                text-align: center;
+            }
+        }
+
+        thead {
+            th {
+                vertical-align: bottom;
+            }
+        }
+    }
+
+    &.table--row {
+        tbody {
+            td {
+                border-top: 1px solid rgb(200, 200, 200);
+            }
+        }
+    }
+
+    &.table--striped {
+        tbody {
+            tr:nth-child(odd) {
+                > td {
+                    background-color: rgb(240, 240, 240);
+                }
+            }
+        }
+    }
+
+    &.table--border {
+        border: 1px solid rgb(200, 200, 200);
+    }
+
+    &.table--hover {
+        tbody {
+            tr {
+                &:hover {
+                    td {
+                        background-color: rgb(240, 240, 240);
+                    }
+                }
+            }
+        }
+
+        &.table--striped {
+            tbody {
+                tr:nth-child(odd) {
+                    &:hover {
+                        > td {
+                            background-color: darken(rgb(240, 240, 240), 10%);
+                        }
+                    }
+                }
+
+                tr {
+                    &:hover {
+                        > td {
+                            background-color: darken(rgb(240, 240, 240), 15%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.table--columns {
+        th,
+        td {
+            border-left: 1px solid rgb(200, 200, 200);
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+    }
+}

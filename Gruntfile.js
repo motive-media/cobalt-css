@@ -7,24 +7,24 @@ module.exports = function (grunt) {
         less: {
             dev: {
                 files: {
-                    "cobalt.css": "cobalt.less"
+                    "cobalt.css": "build.less"
                 }
             },
             production: {
                 options: {
                     yuicompress: true,
-                    report: 'gzip'
+                    report: "gzip"
                 },
                 files: {
-                    "cobalt.min.css": "cobalt.less"
+                    "cobalt.min.css": "build.less"
                 }
             }
         },
 
         watch: {
             build: {
-                files: ['cobalt.less', 'less/**/*.less'],
-                tasks: ['less']
+                files: ["cobalt.build.less", "cobalt.less", "less/**/*.less"],
+                tasks: ["less"]
             }
         }
     });

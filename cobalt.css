@@ -497,3 +497,46 @@ input.btn {
   background-color: #d9534f;
   color: #fff;
 }
+table.table {
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+}
+table.table td,
+table.table th {
+  padding: 8px;
+  text-align: left;
+}
+table.table td.center,
+table.table th.center {
+  text-align: center;
+}
+table.table thead th {
+  vertical-align: bottom;
+}
+table.table--row tbody td {
+  border-top: 1px solid #c8c8c8;
+}
+table.table--striped tbody tr:nth-child(odd) > td {
+  background-color: #f0f0f0;
+}
+table.table--border {
+  border: 1px solid #c8c8c8;
+}
+table.table--hover tbody tr:hover td {
+  background-color: #f0f0f0;
+}
+table.table--hover.table--striped tbody tr:nth-child(odd):hover > td {
+  background-color: #d7d7d7;
+}
+table.table--hover.table--striped tbody tr:hover > td {
+  background-color: #cacaca;
+}
+table.table--columns th,
+table.table--columns td {
+  border-left: 1px solid #c8c8c8;
+}
+table.table--columns th:first-child,
+table.table--columns td:first-child {
+  border-left: 0;
+}
