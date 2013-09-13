@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 
         watch: {
             build: {
-                files: ["cobalt.build.less", "cobalt.less", "less/**/*.less"],
+                files: ["cobalt.*.less", "cobalt.less", "less/**/*.less"],
                 tasks: ["less"]
             }
         }

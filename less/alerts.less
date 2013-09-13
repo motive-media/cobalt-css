@@ -1,0 +1,57 @@
+.alert {
+    .border-radius(4px);
+
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: darken(@alert_color, 10%);
+    color: @alert_text_color;
+
+    &.alert--border {
+        border: 1px solid darken(@alert_color, 20%);
+    }
+
+    &.alert--primary {
+        background-color: @alert_primary_color;
+        color: @alert_primary_text_color;
+
+        &.alert--border {
+            border-color: darken(@alert_primary_color, 15%);
+        }
+    }
+
+    &.alert--success {
+        background-color: @alert_success_color;
+        color: @alert_success_text_color;
+
+        &.alert--border {
+            border-color: darken(@alert_success_color, 15%);
+        }
+    }
+
+    &.alert--info {
+        background-color: @alert_info_color;
+        color: @alert_info_text_color;
+
+        &.alert--border {
+            border-color: darken(@alert_info_color, 15%);
+        }
+    }
+
+    &.alert--warning {
+        background-color: @alert_warning_color;
+        color: @alert_warning_text_color;
+
+        &.alert--border {
+            border-color: darken(@alert_warning_color, 15%);
+        }
+    }
+
+    &.alert--error {
+        background-color: @alert_error_color;
+        color: @alert_error_text_color;
+
+        &.alert--border {
+            border-color: darken(@alert_error_color, 15%);
+        }
+    }
+}
