@@ -8,10 +8,31 @@
         body {
             font-size: 14px;
             font-style: sans-serif;
+            background-color: rgb(235, 235, 235);
         }
 
         article {
             padding: 20px;
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        article .example {
+            border: 1px solid rgb(240, 240, 240);
+            background-color: rgb(250, 250, 250);
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 10px 0;
+        }
+
+        article .example header {
+
+        }
+
+        article .example header h4 {
+            margin: 0;
+            color: rgb(150, 150, 150);
+            font-weight: 100;
         }
 
         article section {
@@ -25,45 +46,60 @@
             <h2>Buttons</h2>
         </header>
 
-        <section class="buttons-large">
-            <a class="btn btn-large" href="#">Large</a>
-            <a class="btn btn-large btn-primary" href="#">Primary</a>
-            <a class="btn btn-large btn-success" href="#">Success</a>
-            <a class="btn btn-large btn-info" href="#">Info</a>
-            <a class="btn btn-large btn-warning" href="#">Warning</a>
-            <a class="btn btn-large btn-error" href="#">Error</a>
-            <a class="btn btn-large btn-clear" href="#">Clear</a>
-        </section>
+        <div class="example">
+            <header><h4>Sizes</h4></header>
 
-        <section class="buttons-default">
-            <a class="btn" href="#">Default</a>
-            <a class="btn btn-primary" href="#">Primary</a>
-            <a class="btn btn-success" href="#">Success</a>
-            <a class="btn btn-info" href="#">Info</a>
-            <a class="btn btn-warning" href="#">Warning</a>
-            <a class="btn btn-error" href="#">Error</a>
-            <a class="btn btn-clear" href="#">Clear</a>
-        </section>
+            <section>
+                <a class="btn btn-large" href="#">Large</a>
+                <a class="btn" href="#">Default</a>
+                <a class="btn btn-small" href="#">Small</a>
+                <a class="btn btn-tiny" href="#">Tiny</a>
+            </section>
+        </div>
 
-        <section class="buttons-small">
-            <a class="btn btn-small" href="#">Small</a>
-            <a class="btn btn-small btn-primary" href="#">Primary</a>
-            <a class="btn btn-small btn-success" href="#">Success</a>
-            <a class="btn btn-small btn-info" href="#">Info</a>
-            <a class="btn btn-small btn-warning" href="#">Warning</a>
-            <a class="btn btn-small btn-error" href="#">Error</a>
-            <a class="btn btn-small btn-clear" href="#">Clear</a>
-        </section>
+        <div class="example">
+            <header><h4>Types</h4></header>
 
-        <section class="buttons-tiny">
-            <a class="btn btn-tiny" href="#">Tiny</a>
-            <a class="btn btn-tiny btn-primary" href="#">Primary</a>
-            <a class="btn btn-tiny btn-success" href="#">Success</a>
-            <a class="btn btn-tiny btn-info" href="#">Info</a>
-            <a class="btn btn-tiny btn-warning" href="#">Warning</a>
-            <a class="btn btn-tiny btn-error" href="#">Error</a>
-            <a class="btn btn-tiny btn-clear" href="#">Clear</a>
-        </section>
+            <section>
+                <a class="btn btn-large" href="#">Large</a>
+                <a class="btn btn-large btn-primary" href="#">Primary</a>
+                <a class="btn btn-large btn-success" href="#">Success</a>
+                <a class="btn btn-large btn-info" href="#">Info</a>
+                <a class="btn btn-large btn-warning" href="#">Warning</a>
+                <a class="btn btn-large btn-error" href="#">Error</a>
+                <a class="btn btn-large btn-clear" href="#">Clear</a>
+            </section>
+        </div>
+
+        <div class="example">
+            <header><h4>Element Types</h4></header>
+
+            <section>
+                <button class="btn btn-large" type="submit">Button</button>
+                <a class="btn btn-large btn-primary" href="#">A Tag</a>
+                <span class="btn btn-large btn-success">Span</span>
+                <input class="btn btn-large" value="Input">
+            </section>
+        </div>
+
+        <div class="example">
+            <header><h4>Disabled</h4></header>
+
+            <section>
+                <button class="btn btn-large disabled" type="submit">Button</button>
+                <a class="btn btn-large btn-primary disabled" href="#">A Tag</a>
+                <span class="btn btn-large btn-success disabled">Span</span>
+                <input class="btn btn-large disabled" value="Input">
+            </section>
+        </div>
+
+        <div class="example">
+            <header><h4>Block</h4></header>
+
+            <section>
+                <button class="btn btn-large btn-primary btn-block" type="submit">Button</button>
+            </section>
+        </div>
     </article>
 </body>
 </html>

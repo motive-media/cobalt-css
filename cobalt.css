@@ -367,6 +367,7 @@ table {
   line-height: 1.4;
   color: #787878;
   background-image: none;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -440,4 +441,32 @@ table {
 }
 .btn.btn-clear:hover {
   background-color: transparent;
+}
+.btn.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn.disabled,
+.btn[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  -moz-opacity: 0.65;
+  -khtml-opacity: 0.65;
+  -webkit-opacity: 0.65;
+  opacity: 0.65;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=65);
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+button.btn,
+input.btn {
+  border: 0;
+}
+span.btn,
+input.btn {
+  cursor: default;
 }
