@@ -1,0 +1,21 @@
+{
+  "name": "cobalt-less",
+  "version": "0.3.1",
+  "main": "cobalt.less",
+  "ignore": [
+    "test"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "homepage": "https://github.com/motive-media/cobalt-less",
+  "_release": "0.3.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.1",
+    "commit": "3408529665fbcd634358601ef8d54b635b9a6ed5"
+  },
+  "_source": "git://github.com/motive-media/cobalt-less.git",
+  "_target": "~0.3.1",
+  "_originalSource": "cobalt-less",
+  "_direct": true
+}

@@ -1,0 +1,13 @@
+// Box Shadow
+.box-shadow(@arguments) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+// Inner Box Shadow
+.inner-shadow(@arguments) {
+    @args: ~"inset @{arguments}";
+
+    .box-shadow(@args);
+}
