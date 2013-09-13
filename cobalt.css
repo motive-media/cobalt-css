@@ -470,3 +470,30 @@ span.btn,
 input.btn {
   cursor: default;
 }
+.highlight {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #e6e6e6;
+  padding: 2px 5px;
+}
+.highlight.highlight-primary {
+  background-color: #428bca;
+  color: #fff;
+}
+.highlight.highlight-success {
+  background-color: #5cb85c;
+  color: #fff;
+}
+.highlight.highlight-info {
+  background-color: #5bc0de;
+  color: #fff;
+}
+.highlight.highlight-warning {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+.highlight.highlight-error {
+  background-color: #d9534f;
+  color: #fff;
+}

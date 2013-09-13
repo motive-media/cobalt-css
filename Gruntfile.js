@@ -12,7 +12,8 @@ module.exports = function (grunt) {
             },
             production: {
                 options: {
-                    yuicompress: true
+                    yuicompress: true,
+                    report: 'gzip'
                 },
                 files: {
                     "cobalt.min.css": "cobalt.less"
