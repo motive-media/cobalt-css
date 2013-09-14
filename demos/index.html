@@ -13,8 +13,6 @@
 
         article {
             padding: 20px;
-            width: 800px;
-            margin: 0 auto;
         }
 
         article .example {
@@ -23,10 +21,6 @@
             border-radius: 10px;
             padding: 10px 20px;
             margin: 10px 0;
-        }
-
-        article .example header {
-
         }
 
         article .example header h4 {
@@ -38,11 +32,34 @@
         article section {
             padding: 10px 0;
         }
+
+        #top {
+            width: 100%;
+            background-color: rgb(44, 44, 44);
+            color: #eee;
+        }
+
+        #top h1 {
+            margin: 0;
+            padding: 5px;
+            text-align: center;
+        }
+
+        #top h1 span {
+            font-weight: normal;
+        }
     </style>
 </head>
 <body>
-    <article>
-        <header>
+
+    <div id="top">
+        <div class="auto-center content-holder">
+            <h1>Cobalt <span>CSS Framework</span></h1>
+        </div>
+    </div>
+
+    <article class="auto-center-content">
+        <header class="center">
             <h2>Buttons</h2>
         </header>
 
@@ -102,8 +119,8 @@
         </div>
     </article>
 
-    <article>
-        <header>
+    <article class="auto-center-content">
+        <header class="center">
             <h2>Highlight</h2>
         </header>
 
@@ -126,8 +143,8 @@
         </div>
     </article>
 
-    <article>
-        <header><h2>Tables</h2></header>
+    <article class="auto-center-content">
+        <header class="center"><h2>Tables</h2></header>
 
         <div class="example">
             <header><h4>Default</h4></header>
@@ -438,8 +455,8 @@
         </div>
     </article>
 
-    <article>
-        <header><h2>Alerts</h2></header>
+    <article class="auto-center-content">
+        <header class="center"><h2>Alerts</h2></header>
 
         <div class="example">
             <header><h4>Alert Colors</h4></header>
@@ -476,6 +493,41 @@
                 <div class="alert alert--border alert--error"><strong>Hello there Error</strong>, welcome to te new framework!</div>
             </section>
         </div>
+    </article>
+
+    <article class="auto-center-content">
+        <header class="center"><h2>Helper Classes</h2></header>
+
+        <div class="example">
+            <header><h4>Auto Center</h4></header>
+
+            <section>
+                <p>Auto centers content with margin</p>
+
+                <pre><code>.auto-center</code></pre>
+            </section>
+        </div>
+
+        <div class="example">
+            <header><h4>Content Holder</h4></header>
+
+            <section>
+                <p>Adds width to div based on less variable <span class="highlight">@content_holder_width</span></p>
+
+                <pre><code>.auto-center</code></pre>
+            </section>
+        </div>
+
+        <div class="example">
+            <header><h4>Auto Center Content Holder</h4></header>
+
+            <section>
+                <p>Auto centers and adds width to div based on less variable <span class="highlight">@content_holder_width</span></p>
+
+                <pre><code>.auto-center-content</code></pre>
+            </section>
+        </div>
+
     </article>
 </body>
 </html>

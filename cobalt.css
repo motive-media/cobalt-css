@@ -354,6 +354,28 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.auto-center {
+  margin: 0 auto;
+}
+.content-holder {
+  width: 900px;
+}
+.auto-center-content {
+  margin: 0 auto;
+  width: 900px;
+}
+.center {
+  text-align: center;
+}
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-none {
+  float: none !important;
+}
 .btn {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
