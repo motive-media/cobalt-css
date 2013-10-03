@@ -1,13 +1,46 @@
-.btn-style(@color: rgb(240, 240, 240), @hover_color: rgb(220, 220, 220)) {
-    background-color: @color;
+.button-style(@start: rgb(240, 240, 240), @end: rgb(220, 220, 220)) {
+    background-color: @start;
+}
+
+.button-style-hover(@start: rgb(220, 220, 220), @end: rgb(200, 200, 200)) {
+    background-color: @start;
+}
+
+.button-style-full(@start: rgb(240, 240, 240), @end: rgb(220, 220, 220), @hover_start: rgb(220, 220, 220), @hover_end: rgb(200, 200, 200)) {
+    .button-style(@start, @end);
 
     &:hover {
-        background-color: @hover_color;
+        .button-style-hover(@hover_start, @hover_end);
     }
 }
 
+.button-style-large() {
+    .border-radius(6px);
+
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+.button-style-small() {
+    .border-radius(3px);
+
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.button-style-tiny() {
+    .border-radius(2px);
+
+    padding: 1px 5px;
+}
+
+
+// Regular Buttons
 .btn {
     .border-radius(4px);
+    .button-style-full;
 
     display: inline-block;
     text-align: center;
@@ -26,87 +59,56 @@
     -o-user-select: none;
     user-select: none;
 
-    .btn-style;
-
 
     // Sizes
 
     &.btn-large {
-        .border-radius(6px);
-
-        padding: 10px 16px;
-        font-size: 18px;
-        line-height: 1.33;
+        .button-style-large;
     }
 
     &.btn-small,
     &.btn-tiny {
-        .border-radius(3px);
-
-        padding: 5px 10px;
-        font-size: 12px;
-        line-height: 1.5;
+        .button-style-small;
     }
 
     &.btn-tiny {
-        .border-radius(2px);
-
-        padding: 1px 5px;
+        .button-style-tiny;
     }
 
     // Styles
 
     &.btn-primary {
-        color: #fff;
-        background-color: @primary_color;
+        .button-style-full(@primary_color, @primary_color, darken(@primary_color, 15%), darken(@primary_color, 15%));
 
-        &:hover {
-            background-color: darken(@primary_color, 15%);
-        }
+        color: #fff;
     }
 
     &.btn-success {
-        color: white;
-        background-color: @success_color;
+        .button-style-full(@success_color, @success_color, darken(@success_color, 15%), darken(@success_color, 15%));
 
-        &:hover {
-            background-color: darken(@success_color, 15%);
-        }
+        color: #fff;
     }
 
     &.btn-info {
-        color: white;
-        background-color: @info_color;
+        .button-style-full(@info_color, @info_color, darken(@info_color, 15%), darken(@info_color, 15%));
 
-        &:hover {
-            background-color: darken(@info_color, 15%);
-        }
+        color: #fff;
     }
 
     &.btn-warning {
-        color: white;
-        background-color: @warning_color;
+        .button-style-full(@warning_color, @warning_color, darken(@warning_color, 15%), darken(@warning_color, 15%));
 
-        &:hover {
-            background-color: darken(@warning_color, 15%);
-        }
+        color: #fff;
     }
 
     &.btn-error {
-        color: white;
-        background-color: @error_color;
+        .button-style-full(@error_color, @error_color, darken(@error_color, 15%), darken(@error_color, 15%));
 
-        &:hover {
-            background-color: darken(@error_color, 15%);
-        }
+        color: #fff;
     }
 
     &.btn-clear {
-        background-color: transparent;
-
-        &:hover {
-            background-color: transparent;
-        }
+        .button-style-full(transparent, transparent, transparent, transparent);
     }
 
     // Extras
@@ -127,6 +129,85 @@
     }
 }
 
+// Pill Buttons
+.btn-pill {
+    .border-radius(4px);
+
+    display: inline-block;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    span {
+        line-height: inherit;
+    }
+
+    &.btn-large {
+        span {
+            .button-style-large;
+        }
+    }
+
+    &.btn-small,
+    &.btn-tiny {
+        span {
+            .button-style-small;
+        }
+    }
+
+    &.btn-tiny {
+        span {
+            .button-style-tiny;
+        }
+    }
+
+    // Styles
+
+    &.btn-primary {
+        span {
+            .button-style-full(@primary_color, @primary_color, darken(@primary_color, 15%), darken(@primary_color, 15%));
+
+            color: #fff;
+        }
+    }
+
+    &.btn-success {
+        span {
+            .button-style-full(@success_color, @success_color, darken(@success_color, 15%), darken(@success_color, 15%));
+
+            color: #fff;
+        }
+    }
+
+    &.btn-info {
+        span {
+            .button-style-full(@info_color, @info_color, darken(@info_color, 15%), darken(@info_color, 15%));
+
+            color: #fff;
+        }
+    }
+
+    &.btn-warning {
+        span {
+            .button-style-full(@warning_color, @warning_color, darken(@warning_color, 15%), darken(@warning_color, 15%));
+
+            color: #fff;
+        }
+    }
+
+    &.btn-error {
+        span {
+            .button-style-full(@error_color, @error_color, darken(@error_color, 15%), darken(@error_color, 15%));
+
+            color: #fff;
+        }
+    }
+
+    &.btn-clear {
+        span {
+            .button-style-full(transparent, transparent, transparent, transparent);
+        }
+    }
+}
 
 button,
 input {
