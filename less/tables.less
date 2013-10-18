@@ -85,4 +85,47 @@ table {
             }
         }
     }
+
+    &.table--all {
+        border: 1px solid rgb(200, 200, 200);
+
+        th,
+        td {
+            border-left: 1px solid rgb(200, 200, 200);
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+
+        tbody {
+            td {
+                border-top: 1px solid rgb(200, 200, 200);
+            }
+
+            tr {
+                &:hover {
+                    td {
+                        background-color: rgb(240, 240, 240);
+                    }
+
+                    > td {
+                        background-color: darken(rgb(240, 240, 240), 15%);
+                    }
+                }
+            }
+
+            tr:nth-child(odd) {
+                > td {
+                    background-color: rgb(240, 240, 240);
+                }
+
+                &:hover {
+                    > td {
+                        background-color: darken(rgb(240, 240, 240), 10%);
+                    }
+                }
+            }
+        }
+    }
 }

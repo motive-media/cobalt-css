@@ -4,10 +4,17 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("bower.json"),
 
+        urlBase: '.',
+        urlBuild: '<%= urlBase %>/build',
+
+        clean: {
+            build: "build"
+        },
+
         less: {
             dev: {
                 files: {
-                    "cobalt.css": "build.less"
+                    "<%= urlBuild %>/cobalt.css": "build.less"
                 }
             },
             production: {
@@ -16,15 +23,15 @@ module.exports = function (grunt) {
                     report: "gzip"
                 },
                 files: {
-                    "cobalt.min.css": "build.less"
+                    "<%= urlBuild %>/cobalt.min.css": "build.less"
                 }
             }
         },
 
         watch: {
             build: {
-                files: ["cobalt.*.less", "cobalt.less", "less/**/*.less"],
-                tasks: ["less"]
+                files: ["*.less", "less/**/*.less"],
+                tasks: ["clean", "less"]
             }
         }
     });

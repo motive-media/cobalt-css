@@ -1,0 +1,55 @@
+#main {
+  width: 900px;
+  margin: 0 auto;
+}
+#main article {
+  -webkit-transition: background-color 0.5s ease, border-width 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease, border-width 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease, border-width 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease, border-width 0.5s ease-in-out;
+  transition: background-color 0.5s ease, border-width 0.5s ease-in-out;
+  border: 1px solid #dcdcdc;
+  background-color: #f0f0f0;
+}
+#main article:hover {
+  -webkit-box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border: 10px solid #a9a9a9;
+  background-color: #bdbdbd;
+}
+#main article .content {
+  background: transparent;
+  background: -moz-linear-gradient(top, #dddddd 0%, rgba(255, 255, 255, 0.2) 100%);
+  background: -o-linear-gradient(top, #dddddd 0%, rgba(255, 255, 255, 0.2) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, rgba(255, 255, 255, 0.2)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, #dddddd 0%, rgba(255, 255, 255, 0.2) 100%);
+  background: -ms-linear-gradient(top, #dddddd 0%, rgba(255, 255, 255, 0.2) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, #dddddd 0%, rgba(255, 255, 255, 0.2) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdddddd', endColorstr='#33ffffff', GradientType=0);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  filter: alpha(opacity=50);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
